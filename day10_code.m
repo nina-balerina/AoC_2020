@@ -34,7 +34,6 @@ answe1 = jolt1*jolt3;
 
 % part 2
 
-C1 = G;
 no1 = sum(G==1);
 no2 = sum(G==2);
 no3 = sum(G==3);
