@@ -65,15 +65,11 @@ for i in range(0, len(b)):
         temporary = WP_pos[0]
         WP_pos[0] = round(WP_pos[0]*math.cos(theta) + WP_pos[1]*math.sin(theta))
         WP_pos[1] = round(-temporary*math.sin(theta) + WP_pos[1]*math.cos(theta))
-        #ind = ang_direction.index(direction)
-        #direction = ang_direction[(ind+int(val[i]/90))%4]
     elif b[i]==action[5]: # right rotation
         theta = val[i]*math.pi/180
         temporary = WP_pos[0]
         WP_pos[0] = round(WP_pos[0]*math.cos(theta) + WP_pos[1]*math.sin(theta))
         WP_pos[1] = round(-temporary*math.sin(theta) + WP_pos[1]*math.cos(theta))
-        # ind = ang_direction.index(direction)
-        # direction = ang_direction[(ind-int(val[i]/90))%4]
     if b[i]==action[0]:
         WP_pos[1] += val[i]
     elif b[i]==action[1]:
