@@ -9,16 +9,6 @@ start_time = time.time()
 f = open("day13.txt",'r')
 txt = f.readlines()
 
-n = 7
-n2 = 2
-n3 = 0
-n4 = 1
-n5 = 6
-n6 = 3
-n7 = 5
-n8 = 6
-n9 = 4
-
 a = int(txt[0])
 buses = txt[1].split(',')
 
