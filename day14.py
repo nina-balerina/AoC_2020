@@ -67,7 +67,6 @@ for (instruction, position, value2, bit_value) in zip (instructions, positions, 
 print("part 1: %s" % (sum(number_list))) # 10452688630537
 print("--- %s seconds ---" % (time.time() - start_time))
 
-
 ### part 2 ###
 
 pos_list = []
@@ -91,16 +90,12 @@ for (instruction, position, value2, bit_value) in zip (instructions, positions, 
                 new_pos_bin.append('X')
         s1 = ''.join(new_pos_bin)
         c = s1.count('X')
-        c_ind = [pos for pos, char in enumerate(s1) if char == 'X']
-        ts1 = [1,0]; ts2 = [1,0]; ts3 = [1,0]
-        ts4 = [1,0]; ts5 = [1,0]; ts6 = [1,0]
-        ts7 = [1,0]; ts8 = [1,0]; ts9 = [1,0]  
         perms = []
         j = 0
-        for r in itertools.product(ts1,ts2,ts3,ts4,ts5,ts6,ts7,ts8,ts9):
+        for r in itertools.product([0,1], repeat=c):
             perms.append(r)
             j +=1
-        for l in range(512):
+        for l in range(2**c):
             N = s1
             modified_position = []
             counter = 0
@@ -111,7 +106,6 @@ for (instruction, position, value2, bit_value) in zip (instructions, positions, 
                 elif N[m]!='X':
                     modified_position.append(new_pos_bin[m])
             s2 = ''.join(modified_position)
-            #print(s2)
             s3 = int(s2, 2)
             if s3 in pos_list:
                 s3_ind = pos_list.index(s3)
@@ -122,4 +116,4 @@ for (instruction, position, value2, bit_value) in zip (instructions, positions, 
                 number_list3.append(value2)
 
 print("part 2:%s" % (sum(number_list3))) #2881082759597
-print("--- %s seconds ---" % (time.time() - start_time))
+print("--- %s seconds ---" % (time.time() - start_time))    
