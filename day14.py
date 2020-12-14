@@ -121,5 +121,5 @@ for (instruction, position, value2, bit_value) in zip (instructions, positions, 
                 pos_list.append(s3)
                 number_list3.append(value2)
 
-print("part 2:%s" % (sum(number_list3)) #2881082759597
+print("part 2:%s" % (sum(number_list3))) #2881082759597
 print("--- %s seconds ---" % (time.time() - start_time))
