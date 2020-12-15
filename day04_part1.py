@@ -13,10 +13,9 @@ txt = f.readlines()
 fields = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid', 'cid'}
 ok_fields = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'}
 
-i = 0
+i = 0; k = 0
 a = {}
 valid = 0
-k = 0
 for line in txt:
     if line in ['\n', '\r\n']:
         for f in ok_fields:
@@ -25,23 +24,16 @@ for line in txt:
         if k==7:
             valid +=1
             print(a, valid)
-        i = 0
-        del a
+        i = 0; k = 0
         a = {}
-        del bs
-        k = 0
     else:
         i +=1
         print(i)
-        ds = line.split('\n')
-        bs = ds[0].split(' ')
+        bs = line.strip().split(' ')
         cs = []
         j = 0
         for b in bs:
             cs.append(b.split(':'))
             a[cs[j][0]] = cs[j][1]
             j +=1
-        
-
-                
-        
+    
