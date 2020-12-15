@@ -42,7 +42,7 @@ for i in range(l,30000000):
     if i == 2019:
         print("part 1: %s" % new_number)
     elif i ==30000000-1:
-        print("part 3: %s" % new_number)
+        print("part 2: %s" % new_number)
 
 print("--- %s seconds ---" % (time.time() - start_time))  
     
