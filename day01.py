@@ -4,7 +4,6 @@ Created on Thu Dec 17 23:37:27 2020
 
 @author: nina
 """
-# test za github 
 
 import time
 start_time = time.time()
