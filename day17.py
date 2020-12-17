@@ -30,11 +30,9 @@ minx = 0; maxx = i
 miny = 0; maxy = j
 minz = 0; maxz = 0
     
-j = 0
 perms = []
 for r in itertools.product([-1,0,1], repeat=3):
     perms.append(r)
-    j +=1    
 del perms[perms.index((0,0,0))]
 
 l = 0
@@ -90,11 +88,9 @@ miny = 0; maxy = j
 minz = 0; maxz = 0
 minw = 0; maxw = 0
 
-j = 0
 perms = []
 for r in itertools.product([-1,0,1], repeat=4):
-    perms.append(r)
-    j +=1    
+    perms.append(r)  
 del perms[perms.index((0,0,0,0))]
 
 l = 0
