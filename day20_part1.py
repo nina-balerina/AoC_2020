@@ -15,14 +15,14 @@ tiles = []
 boundaries = []
 for tile in txt:
     tileIDs.append(int(tile.split(':')[0].split(' ')[1]))
-    tile = tile.split(':')[1].strip()
-    tiles.append(tile)
-    tile_parts = tile.split('\n')
+    tile_image = tile.split(':')[1].strip()
+    tiles.append(tile_image)
+    tile_parts = tile_image.split('\n')
     b1 = ''; b2 = ''
     for tile in tile_parts:
         b1 += tile[0]
-        b2 += tile[9]
-    boundaries_single_tile = [tile_parts[0][:], b2, tile_parts[9][:], b1]
+        b2 += tile[-1]
+    boundaries_single_tile = [tile_parts[0][:], b2, tile_parts[-1][:], b1]
     boundaries.append(boundaries_single_tile)
     
 bound_match = []    
