@@ -22,9 +22,7 @@ while cond==0:
         player1.append(card2)
     elif card2>card1:
         player2.append(card2)
-        player2.append(card1)
-    player1[i] = 0
-    player2[i] = 0    
+        player2.append(card1)   
     i += 1
     if len(player1)<=i or len(player2)<=i:
         cond = 1
@@ -33,7 +31,6 @@ win_deck = player1[i:] + player2[i:]
 res = 0; counter = 0
 for i in range(len(win_deck)-1,-1,-1):
     counter += 1
-    print(i, counter)
     res = res + int(win_deck[i])*counter
     
 print("party 1: %s" % res) #36257
